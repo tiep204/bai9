@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bat su kien ban phim</title>
+</head>
+<body>
+<img id="banPhim" style="position: relative; top: 0px; left: 0px"
+     src="https://img.lovepik.com/element/40036/0632.png_860.png" height="250"><br>
+
+<button onclick="leftArrowPressed()"> sang trai</button>
+<button onclick="rightArrowPressed()">sang phai</button>
+<button onclick="upArrowPressed()">len tren</button>
+<button onclick="downArrowPressed()">xuong duoi</button>
+<script>
+    let element = document.getElementById("banPhim");
+
+    function rightArrowPressed() {
+        element.style.left = parseInt(element.style.left) + 10 + 'px';
+    }
+
+    function leftArrowPressed() {
+        element.style.left = parseInt(element.style.left) - 10 + 'px';
+    }
+
+    function upArrowPressed() {
+        element.style.top = parseInt(element.style.top) - 10 + 'px';
+    }
+
+    function downArrowPressed() {
+        element.style.top = parseInt(element.style.top) + 10 + 'px';
+    }
+
+
+    function moveWithKeyboard(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 38:
+                upArrowPressed();
+                break;
+            case 40:
+                downArrowPressed();
+                break;
+        }
+    }
+
+        window.addEventListener('keydown', moveWithKeyboard);
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuot bat su kien</title>
+</head>
+<body>
+    <img id="mylmage" style="position: relative; top: 0px; left: 0px" src="https://salt.tikicdn.com/ts/tmp/d0/05/3a/03916f73be39233ba4b2b2b19e8a8baa.JPG" height="250px"/><br>
+    <button onclick="moveleft()"><--ben trai</button>
+    <button onclick="moveRight()">ben phai --></button>
+
+<script>
+    let image = document.getElementById('mylmage');
+    function moveRight() {
+        image.style.left = parseInt(image.style.left) + 10 + 'px';
+    }
+    function moveleft() {
+        image.style.left = parseInt(image.style.left) - 10 + 'px';
+    }
+function moveWithKeyboard(evt) {
+    switch (evt.keyCode) {
+        case 37:
+            moveleft();
+            break;
+        case 39:
+            moveRight();
+            break;
+
+    }
+}
+window.addEventListener('keydown',moveWithKeyboard);
+</script>
+
+</body>
+</html>

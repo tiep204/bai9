@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may tinh don gian</title>
+</head>
+<body>
+<h1>Máy tính casio minh họa</h1>
+<style>
+    div {
+        border: 5px solid black;
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+    }
+</style>
+
+<div>
+
+    <span class="input">casio fx570VN plus</span>
+
+
+    <input id="maytinh" type="text"><br>
+        <button onclick="phim('7')">7</button>
+        <button onclick="phim('8')">8</button>
+        <button onclick="phim('9')">9</button>
+        <button onclick="phim('+')" >+</button>
+        <br>
+        <button onclick="phim('4')" >4</button>
+        <button onclick="phim('5')" >5</button>
+        <button onclick="phim('6')" >6</button>
+        <button onclick="phim('-')" >-</button>
+        <br>
+        <button onclick="phim('1')" >1</button>
+        <button onclick="phim('2')" >2</button>
+        <button onclick="phim('3')">3</button>
+        <button onclick="phim('*')" >x</button>
+        <br>
+        <button onclick="xoa('C')" >C</button>
+        <button onclick="phim('0')" >0</button>
+        <button onclick="dapan('=')" >=</button>
+        <button onclick="phim('/')" >/</button>
+    </div>
+</div>
+
+<script>
+    function phim(a) {
+        document.getElementById('maytinh').value += a
+    }
+
+    function xoa() {
+        document.getElementById('maytinh').value = ''
+    }
+
+    function dapan() {
+        let input = document.getElementById('maytinh').value;
+        let dapan = eval(input)
+        document.getElementById('maytinh').value = dapan
+    }
+</script>
+</body>
+</html>
