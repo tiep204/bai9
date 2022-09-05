@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!--    <style>-->
+  <!--        img{-->
+  <!--            box-shadow: blue 4px 4px 9px;-->
+  <!--        }-->
+
+  <!--    </style>-->
+</head>
+<body>
+<img id="anh1" src="image/Gau1.jpg" width="600px" height="100px" onclick="chuyenDong1()"><br>
+<img id="anh2" src="image/Cat2.jpg" width="600px" height="80px" onclick="chuyenDong2()"><br>
+<img id="anh3" src="image/Khi3.jpg" width="600px" height="80px" onclick="chuyenDong3()">
+<script>
+  let count1 = 0;
+  let count2 = 1;
+  let count3 = 2;
+  let img1 = document.getElementById('anh1');
+  let img2 = document.getElementById('anh2');
+  let img3 = document.getElementById('anh3');
+  checkShadow();
+
+  function chuyenDong1() {
+    count1++;
+    console.log('count1 === ' + count1)
+    if (count1 == 1) {
+      img1.src = 'image/Cat1.jpg';
+    } else if (count1 == 2) {
+      img1.src = 'image/Khi1.jpg';
+    } else {
+      count1 = 0;
+      img1.src = 'image/Gau1.jpg';
+    }
+    checkShadow();
+  }
+
+  function chuyenDong2() {
+    count2++;
+    if (count2 == 1) {
+      img2.src = 'image/Cat2.jpg';
+    } else if (count2 == 2) {
+      img2.src = 'image/Khi2.jpg';
+    } else {
+      count2 = 0;
+      img2.src = 'image/Gau2.jpg';
+    }
+    checkShadow();
+  }
+
+  function chuyenDong3() {
+    count3++;
+    if (count3 == 1) {
+      img3.src = 'image/Cat3.jpg';
+    } else if (count3 == 2) {
+      img3.src = 'image/Khi3.jpg';
+    } else {
+      count3 = 0;
+      img3.src = 'image/Gau3.jpg';
+    }
+    checkShadow();
+  }
+
+  function checkShadow() {
+    if (count1 == count2 && count2 == count3) {
+      img1.style.boxShadow = 'red 4px 4px 9px';
+      img2.style.boxShadow = 'red 4px 4px 9px';
+      img3.style.boxShadow = 'red 4px 4px 9px';
+    } else {
+      img1.style.boxShadow = 'blue 4px 4px 9px';
+      img2.style.boxShadow = 'blue 4px 4px 9px';
+      img3.style.boxShadow = 'blue 4px 4px 9px';
+    }
+  }
+</script>
+</body>
+</html>
