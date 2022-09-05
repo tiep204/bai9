@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh hoa hong</title>
+</head>
+<h1>Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng </h1>
+
+<body>
+
+<input id="anvaoday" type="text"> tiền hoanh số <br><br>
+<button onclick="tinhtien()">tính</button>
+<h1 id="hienthira"></h1>
+<script>
+function tinhtien() {
+    let doanhso =+document.getElementById('anvaoday').value
+    let nhantien = doanhso*10/100
+    if(nhantien){
+        document.getElementById('hienthira').innerHTML = 'số tiền bạn được hoa hồng là: '+nhantien
+    }
+
+}
+</script>
+</body>
+</html>

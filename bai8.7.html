@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h1>giai phuong trinh bac hai</h1>
+
+</head>
+<body>
+<input id="nhap1" type="text"> nhap a vao <br><br>
+<input id="nhap2" type="text"> nhap b vao <br><br>
+<input id="nhap3" type="text"> nhap c vao <br><br>
+<button onclick="batDau()">Bat dau</button>
+<h1 id="hienRaa"></h1>
+<h1 id="hienRab"></h1>
+<h1 id="hienRac"></h1>
+
+<script>
+function batDau() {
+    let a =parseInt(document.getElementById('nhap1').value)
+    let b =parseInt(document.getElementById('nhap2').value)
+    let c =parseInt(document.getElementById('nhap3').value)
+    let denta = b*b-4*a*c
+    let ketQua1=-b/2*a
+
+
+if(a!==0){
+    if (denta <0) {
+        document.getElementById('hienRaa').innerHTML = 'phuong trinh vo nghiem: <br>denta='+denta
+    }else if (denta >0) {
+        document.getElementById('hienRaa').innerHTML = 'phuong trinh co hai nghiem phan biet la:'+(x1=-b-Math.sqrt(denta)/2*ax,x2=-b+Math.sqrt(denta)/2*a)
+    }else if (denta == 0){
+        document.getElementById('hienRaa').innerHTML = 'phuong trinh co nghiem kep la:' + (x=-b/2*a)
+    }else {
+        document.getElementById('hienRaa').innerHTML = 'khong co'
+    }
+}else{
+    alert('di ve')
+}
+}
+</script>
+</body>
+</html>

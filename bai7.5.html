@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi-->
+<!--cuối kỳ-->
+<h1>bang tinh hoc luc hoc sinh</h1>
+<body>
+<input id="nhapVao1" type="text"> diem Bai Kiem Tra<br><br>
+<input id="nhapVao2" type="text"> diem thi giua ky <br><br>
+<input id="nhapVao3" type="text"> diem thi cuoi ky <br><br>
+<button onclick="nhap1()">ket qua</button>
+<h1 id="hienthi"></h1>
+
+<script>
+
+
+    function nhap1() {
+        let diemKiemTra = +document.getElementById('nhapVao1').value
+        let diemGiuaKy = +document.getElementById('nhapVao2').value
+        let diemCuoiKy = +document.getElementById('nhapVao3').value
+        let ketqua = (diemkiemtra + diemgiuaky * 2 + diemcuoiky * 3) / 6
+        if (ketqua >= 8) {
+            document.getElementById('hienthi').innerHTML = 'Ban la hoc sinh gioi : <br>điểm trung bình môn: ' + ketqua
+            // console.log(ketqua+'daylaketqua')
+            // alert('ban la hoc sinh gioi');
+        } else if (ketqua >= 7) {
+            document.getElementById('hienthi').innerHTML = 'Ban la hoc sinh kha : <br>điểm trung bình môn: ' + ketqua
+            // alert('ban la hoc sinh kha');
+        } else if (ketqua >= 5) {
+            document.getElementById('hienthi').innerHTML = 'ban la hoc sinh trung binh wanning!!!: <br> điểm trung bình môn: ' + ketqua
+            // alert('ban la hoc sinh trung binh');
+        } else
+            document.getElementById('hienthi').innerHTML = 'ban la hoc sinh yeu: <br> điểm trung bình môn: ' + ketqua
+        // alert('ban la hoc sinh yeu');
+
+
+    }
+
+    // var toan = +prompt('nhap diem toan cua ban vao day');
+    // var van = +prompt('nhap diem van');
+    // var anh = +prompt('nhap diem anh');
+    // var sinh = +prompt('nhap diem sinh');
+    // var su = +prompt('nhap diem su');
+    // var dia = +prompt('nhap diem dia');
+    // var dtb = (toan + van + anh + sinh + su + dia) / 6
+
+    // if ( dtb >=8) {
+    //     alert('ban la hoc sinh gioi');
+    // } else if (dtb >= 6) {
+    //     alert('ban la hoc sinh kha');
+    // } else if (dtb >= 4) {
+    //     alert('ban la hoc sinh trung binh');
+    // } else  {
+    //     alert('ban la hoc sinh yeu');
+    // }
+</script>
+</body>
+</html>
